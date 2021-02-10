@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int ERROR = -12345678;
+
 class Queue {
 private:
     int first;
@@ -34,6 +36,7 @@ int Queue::front() {
         return queue[first];
     }
     cout << "Queue is empty" << '\n';
+    return ERROR;
 }
 
 int Queue::end() {
@@ -41,6 +44,7 @@ int Queue::end() {
         return queue[last-1];
     }
     cout << "Queue is empty" << '\n';
+    return ERROR;
 }
 
 bool Queue::empty() {
