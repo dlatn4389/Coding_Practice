@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int ERROR = -12345678;
+
 class Stack {
 private:
     int last;
@@ -32,6 +34,7 @@ int Stack::front() {
         return stack[0];
     }
     cout << "Stack is empty" << '\n';
+    return ERROR;
 }
 
 int Stack::end() {
@@ -39,6 +42,7 @@ int Stack::end() {
         return stack[last-1];
     }
     cout << "Stack is empty" << '\n';
+    return ERROR;
 }
 
 bool Stack::empty() {
